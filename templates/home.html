@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .allign_center{
+            text-align: center;
+        }
+        body{
+            background-image: url("{{ url_for('static',filename='pic2.jpg')}}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+    <br><br>
+    <h1 style="text-align: center;">
+        Airline Loyal and Disloyal Customer Segmentation
+        <br><br>
+
+    </h1><div class="allign_center">
+        <form action="{{ url_for('prediction') }}" method="post">
+             <label for="age"><b>Enter Age: </b></label>
+             <br>
+            <input type="number" name="age" width="200px" height="30px" class="lead" style="border-color:green; border-width: 3px;" id="fifth" required="required" placeholder="Enter Age" >
+
+
+            <br><br>
+            <label for="gender"><b>Select Gender:</b></label>
+            <br>
+            <select type="number" name="gender"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            
+            <br><br>
+            <label for="travel_type"><b>Select Type of Travel:</b></label>
+            <br>
+            <select type="number" name="travel_type"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Business Travel</option>
+                <option>Personal Travel</option>
+            </select>
+
+            <br><br>
+            <label for="class_type"><b>Select Type of Class:</b></label>
+            <br>
+            <select type="number" name="class_type"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Business Class</option>
+                <option>Eco</option>
+                <option>Eco-Plus</option>
+            </select>
+
+            <br><br>
+            <label for="distance"><b>Enter Distance:</b></label>
+            <br>
+            <input type="number" name="distance" width="200px" height="30px" class="lead" style="border-color: green; border-width: 3px ;" id="fifth" required="required" placeholder="Enter Distance" >
+            
+
+            <br><br>
+            <label for="inflight_entertainment"><b>Rating for Inflight Entertainment:</b></label>
+            <br>
+            <select type="number" name="inflight_entertainment"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Choose from 1 to 5</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            <br><br>
+            <label for="baggage_handling"><b>Rating for Baggage Handling:</b></label>
+            <br>
+            <select type="number" name="baggage_handling"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Choose from 1 to 5</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            <br><br>
+            <label for="cleanliness"><b>Rating for Cleanliness:</b></label>
+            <br>
+            <select type="number" name="cleanliness"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Choose from 1 to 5</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            
+            <br><br>
+            <label for="customer_type"><b>Customer Type:</b></label>
+            <br>
+            <select type="number" name="customer_type"  class="lead" style="border-color: green; border-width: 3px ;width: 230px; height:40px;" id="fifth" required="required" placeholder="Select Gender" >
+                <option>Loyal</option>
+                <option>Disloyal</option>
+            </select>
+            
+            <br><br>
+            <label for="departure_delay"><b>Enter Delay in Departure:</b></label>
+            <br>
+            <input type="number" name="departure_delay" width="200px" height="30px" class="lead" style="border-color: green; border-width: 3px ;" id="fifth" required="required" placeholder="Departure Delay" >
+            
+            <br><br>
+            <label for="arrival_delay"><b>Enter Delay in Arrival:</b></label>
+            <br>
+            <input type="number" name="arrival_delay" width="200px" height="30px" class="lead" style="border-color: green; border-width: 3px ;" id="fifth" required="required" placeholder="Arrival Delay" >
+            <br><br><br>
+            <button type="submit" style="width: 220px; height: 40px; border-width: 5px; background-color: rgb(8, 179, 8);">Submit</button>
+        </form>
+        
+        
+        </div>
+        <br><br><br>
+        </main>
+        <footer class="allign_center">
+        <p>@2024 All Rights Reserved by AkKartik</p>
+        </footer>
+</body>
+</html>
